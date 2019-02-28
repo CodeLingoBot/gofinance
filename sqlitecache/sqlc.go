@@ -145,7 +145,8 @@ func (c *SqliteCache) Quote(symbols []string) ([]fquery.Quote, error) {
 	return results, err
 }
 
-/* I consider this to be an extremely dirty function, it should be split up
+/* 
+ * and possibly (hopefully) simplified*/I consider this to be an extremely dirty function, it should be split up
  * and possibly (hopefully) simplified*/
 func (c *SqliteCache) Hist(symbols []string) (map[string]fquery.Hist, error) {
 	/* fetch all the historical results we have in the cache */

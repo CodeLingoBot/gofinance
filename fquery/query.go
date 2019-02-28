@@ -41,7 +41,8 @@ type Quote struct {
 	Ma50, Ma200 float64 /* 200- and 50-day moving average */
 }
 
-/* will try to calculate the dividend payout ratio, if possible,
+/* 
+ * otherwise returns 0 */DivPayoutRatio will try to calculate the dividend payout ratio, if possible,
  * otherwise returns 0 */
 func (q *Quote) DivPayoutRatio() float64 {
 	/* total dividends / net income (same period, mostly 1Y):
